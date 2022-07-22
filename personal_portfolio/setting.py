@@ -25,7 +25,7 @@ SECRET_KEY = 'qq7u(!+fpvlp2)5)ox12ax3wv9%vu61l-x71$layn=+-)!h856'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['Niloofar13326.pythonanywhere.com']
+ALLOWED_HOSTS = ['niloofar88.pythonanywhere.com']
 
 
 # Application definition
