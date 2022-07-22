@@ -1,0 +1,39 @@
+{% extends "portfolio/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+
+
+<div class="row justify-content-center mb-3">
+  <div class="col-md-9 text-center">
+    <h1 id="hometext" class="font-weight-bold">Greetings! I am Niloofar</h1>
+    <p> I am niloofar and in my thirties. Having done my Bs in Electrical engineering, Electronics, I gained my Ms in this amazing and reputed field of study. After working as a university lecturer, I have decisively decided to make my childhood dream true. Since I used and had done some software programming related to electrical engineering, namely AVR, PLC, and Proteus PCB Design Software, I have started to study and experienced programming. Having gained some hands-on experience in Python, HTML, CSS and Django, I have recently been studying and practicing javascripts. 
+        I have been certified by University of Michigan which is offered by coursera in Python, and also Iran Technical & Vocational Training Organization in HTML and CSS. I believe if I am given this opportunity to work, I am certainly sure that my hiring manager and employers will be satisfied with my job. My former colleagues, professors, and employers have been believed that I make a good teamwork and the same time a fantastic problem solver. I think I am able to tackle difficult situations and help my colleagues when I am needed, and as a resilient person, I never give up learning and improving.
+</p>
+  </div>
+</div>
+
+<h2 class="mt-5">Fantastic momements in the first year in Halifax 😊</h2>
+<hr>
+<div class="row">
+  {% for project in projects %}
+  <div class="col-lg-4 col-md-6">
+
+    {% if project.url %}
+    <a href="{{ project.url }}">
+      <img src="{{ project.image.url }}" class="img-fluid mb-2">
+    </a>
+    {% else %}
+
+    <img src="{{ project.image.url }}" class="img-fluid mb-2">
+    {% endif %}
+    <h3>{{ project.title }}</h3>
+    <p>{{ project.description }}</p>
+
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}
